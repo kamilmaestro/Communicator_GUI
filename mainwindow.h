@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "menu.h"
+#include "login.h"
 #include "qmessagebox.h"
 
 namespace Ui {
@@ -21,6 +23,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Menu *menu;
+    Login *login;
 };
 
 #endif // MAINWINDOW_H
