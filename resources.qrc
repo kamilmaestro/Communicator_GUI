@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>sublime.bmp</file>
+    </qresource>
+</RCC>

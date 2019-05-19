@@ -12,3 +12,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_loginBtn_clicked()
+{
+    QString username = ui->loginEditText->text();
+    QString password = ui->passwordEditText->text();
+}

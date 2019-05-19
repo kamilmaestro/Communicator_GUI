@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/images/sublime.bmp);</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGroupBox" name="signinGroup">
     <property name="geometry">
@@ -28,8 +31,15 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">selection-background-color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);</string>
+    </property>
     <property name="title">
      <string>Sign in</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
     <widget class="QLabel" name="userNameLabel">
      <property name="geometry">
@@ -112,6 +122,10 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>Login</string>
     </property>
@@ -130,10 +144,30 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>Help</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-2</x>
+      <y>6</y>
+      <width>611</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>signinGroup</zorder>
+   <zorder>loginBtn</zorder>
+   <zorder>helpBtn</zorder>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
