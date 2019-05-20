@@ -19,7 +19,7 @@ void MainWindow::on_loginBtn_clicked()
 {
     QString userName = ui->loginEditText->text();
     QString password = ui->passwordEditText->text();
-    login = new Login(userName, password);
+    user = new User(userName, password);
     if((!login->isDataCorrect(userName)) || (!(login->isDataCorrect(password)))){
         QMessageBox::warning(this, "Login", "Incorrect data");
     }else{

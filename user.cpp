@@ -1,18 +1,18 @@
-#include "login.h"
+#include "user.h"
 
-Login::Login(QString userName, QString password)
+User::User(QString userName, QString password)
 {
     this->userName = userName;
     this->password = password;
 }
 
-Login::Login(QString userName, QString password, bool isCorrect)
+User::User(QString userName, QString password, bool isCorrect)
 {
     this->userName = userName;
     this->password = password;
 }
 
-bool Login::isDataCorrect(QString data)
+bool User::isDataCorrect(QString data)
 {
     if(data.size() < MIN_LETTERS || data.size() > MAX_LETTERS)
         return false;

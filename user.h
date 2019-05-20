@@ -1,16 +1,16 @@
-#ifndef LOGIN_H
-#define LOGIN_H
+#ifndef USER_H
+#define USER_H
 
 #include "iostream"
 #include "algorithm"
 #include <QString>
 
-class Login
+class User
 {
 public:
-    Login(QString userName, QString password);
-    Login(QString userName, QString password, bool isCorrect);
-    ~Login() = default;
+    User(QString userName, QString password);
+    User(QString userName, QString password, bool isCorrect);
+    ~User() = default;
     bool isDataCorrect(QString data);
     void checkContent(char letter);
 private:
@@ -20,4 +20,4 @@ private:
     QString password;
 };
 
-#endif // LOGIN_H
+#endif // USER_H

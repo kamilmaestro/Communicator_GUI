@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "menu.h"
-#include "login.h"
+#include "user.h"
 #include "qmessagebox.h"
 
 namespace Ui {
@@ -28,7 +28,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Menu *menu;
-    Login *login;
+    User *user;
     const int WINDOW_HEIGHT = 250;
     const int WINDOW_WIDTH = 600;
 };
