@@ -14,8 +14,8 @@ public:
     bool isDataCorrect(QString data);
     void checkContent(char letter);
 private:
-    const int minLetters = 5;
-    const int maxLetters = 20;
+    const int MIN_LETTERS = 5;
+    const int MAX_LETTERS = 25;
     QString userName;
     QString password;
 };

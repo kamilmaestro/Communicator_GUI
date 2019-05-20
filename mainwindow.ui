@@ -130,7 +130,7 @@ color: rgb(255, 255, 255);</string>
      <string>Login</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="helpBtn">
+   <widget class="QPushButton" name="registerBtn">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -148,7 +148,7 @@ color: rgb(255, 255, 255);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Help</string>
+     <string>Register</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -167,7 +167,7 @@ color: rgb(255, 255, 255);</string>
    <zorder>label</zorder>
    <zorder>signinGroup</zorder>
    <zorder>loginBtn</zorder>
-   <zorder>helpBtn</zorder>
+   <zorder>registerBtn</zorder>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -187,13 +187,25 @@ color: rgb(255, 255, 255);</string>
      <height>26</height>
     </rect>
    </property>
-   <widget class="QMenu" name="settingsMenu">
+   <widget class="QMenu" name="helpMenu">
     <property name="title">
-     <string>Settings</string>
+     <string>Help</string>
     </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionLogin"/>
    </widget>
-   <addaction name="settingsMenu"/>
+   <addaction name="helpMenu"/>
   </widget>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionLogin">
+   <property name="text">
+    <string>Login</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

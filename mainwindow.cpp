@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setFixedSize(600, 250);
+    this->setFixedSize(WINDOW_WIDTH, WINDOW_HEIGHT);
     this->show();
 }
 
@@ -30,3 +30,28 @@ void MainWindow::on_loginBtn_clicked()
     }
     delete login;
 }
+
+void MainWindow::on_actionAbout_triggered()
+{
+    QString title = "Communicator";
+    QString text = "This is an application that offers real-time text transmission.";
+    handleMsg(title, text);
+}
+
+void MainWindow::on_actionLogin_triggered()
+{
+    QString title = "Rules";
+    QString text = "Only letters from the English Alphabet are allowed."
+                                 " Your data should be longer than 4 signs but the maximum is 25";
+    handleMsg(title, text);
+}
+
+void MainWindow::handleMsg(QString title, QString text){
+    QMessageBox::information(this, title, text);
+}
+
+
+
+
+
+

@@ -14,7 +14,7 @@ Login::Login(QString userName, QString password, bool isCorrect)
 
 bool Login::isDataCorrect(QString data)
 {
-    if(data.size() < minLetters || data.size() > maxLetters)
+    if(data.size() < MIN_LETTERS || data.size() > MAX_LETTERS)
         return false;
 
     for(int i = 0; i < data.size(); i++){
