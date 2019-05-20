@@ -20,7 +20,7 @@ void MainWindow::on_loginBtn_clicked()
     QString userName = ui->loginEditText->text();
     QString password = ui->passwordEditText->text();
     user = new User(userName, password);
-    if((!login->isDataCorrect(userName)) || (!(login->isDataCorrect(password)))){
+    if((!user->isDataCorrect(userName)) || (!(user->isDataCorrect(password)))){
         QMessageBox::warning(this, "Login", "Incorrect data");
     }else{
         QMessageBox::information(this, "Login", "You are now logged in");
@@ -28,7 +28,7 @@ void MainWindow::on_loginBtn_clicked()
         menu = new Menu(this);
         menu->show();
     }
-    delete login;
+    delete user;
 }
 
 void MainWindow::on_actionAbout_triggered()

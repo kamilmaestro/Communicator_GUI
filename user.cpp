@@ -6,12 +6,6 @@ User::User(QString userName, QString password)
     this->password = password;
 }
 
-User::User(QString userName, QString password, bool isCorrect)
-{
-    this->userName = userName;
-    this->password = password;
-}
-
 bool User::isDataCorrect(QString data)
 {
     if(data.size() < MIN_LETTERS || data.size() > MAX_LETTERS)

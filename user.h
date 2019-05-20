@@ -9,10 +9,8 @@ class User
 {
 public:
     User(QString userName, QString password);
-    User(QString userName, QString password, bool isCorrect);
     ~User() = default;
     bool isDataCorrect(QString data);
-    void checkContent(char letter);
 private:
     const int MIN_LETTERS = 5;
     const int MAX_LETTERS = 25;
