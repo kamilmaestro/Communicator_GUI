@@ -50,8 +50,8 @@ void MainWindow::handleMsg(QString title, QString text){
     QMessageBox::information(this, title, text);
 }
 
-
-
-
-
-
+void MainWindow::on_registerBtn_clicked()
+{
+    registration = new Registration(this);
+    registration->show();
+}

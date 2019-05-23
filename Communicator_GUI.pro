@@ -27,16 +27,19 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     menu.cpp \
-    user.cpp
+    user.cpp \
+    registration.cpp
 
 HEADERS += \
         mainwindow.h \
     menu.h \
-    user.h
+    user.h \
+    registration.h
 
 FORMS += \
         mainwindow.ui \
-    menu.ui
+    menu.ui \
+    registration.ui
 
 RESOURCES += \
     resources.qrc

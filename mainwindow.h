@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "menu.h"
 #include "user.h"
+#include "registration.h"
 #include "qmessagebox.h"
 
 namespace Ui {
@@ -25,10 +26,13 @@ private slots:
 
     void on_actionLogin_triggered();
 
+    void on_registerBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     Menu *menu;
     User *user;
+    Registration *registration;
     const int WINDOW_HEIGHT = 250;
     const int WINDOW_WIDTH = 600;
 };
