@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/images/sublime.bmp);</string>
+   <string notr="true">background-image: url(:/img/back1.jpg);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGroupBox" name="signinGroup">
@@ -124,7 +124,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">border-color: rgb(255, 255, 255);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+background-image: url(:/img/back4-3.PNG);</string>
     </property>
     <property name="text">
      <string>Login</string>
@@ -184,7 +185,7 @@ color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="helpMenu">
