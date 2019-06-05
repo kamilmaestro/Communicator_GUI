@@ -25,6 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    forgotten_password.cpp \
+    help.cpp \
         main.cpp \
         mainwindow.cpp \
     menu.cpp \
@@ -32,12 +34,16 @@ SOURCES += \
     registration.cpp
 
 HEADERS += \
+    forgotten_password.h \
+    help.h \
         mainwindow.h \
     menu.h \
     user.h \
     registration.h
 
 FORMS += \
+    forgotten_password.ui \
+    help.ui \
         mainwindow.ui \
     menu.ui \
     registration.ui
