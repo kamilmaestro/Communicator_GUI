@@ -2,7 +2,6 @@
 #define MENU_H
 
 #include <QDialog>
-class QSqlDatabase;
 
 namespace Ui {
 class Menu;
@@ -16,9 +15,12 @@ public:
     explicit Menu(QWidget *parent = nullptr);
     ~Menu();
 
+private slots:
+    void on_sendButton_clicked();
+
 private:
     Ui::Menu *ui;
- //   QSqlDatabase *dataBase = nullptr;
+   // Database *dataBase = nullptr;
 };
 
 #endif // MENU_H

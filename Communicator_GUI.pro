@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    database.cpp \
     forgotten_password.cpp \
     help.cpp \
         main.cpp \
@@ -34,6 +35,7 @@ SOURCES += \
     registration.cpp
 
 HEADERS += \
+    database.h \
     forgotten_password.h \
     help.h \
         mainwindow.h \
