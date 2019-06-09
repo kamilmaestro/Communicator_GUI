@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "database.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -19,16 +21,29 @@ void MainWindow::on_loginBtn_clicked()
 {
     QString userName = ui->loginEditText->text();
     QString password = ui->passwordEditText->text();
+
+    auto dataBase = database::connect();
+    QSqlQuery query{dataBase};
+
     user = new User(userName, password);
     if((!user->isDataCorrect(userName)) || (!(user->isDataCorrect(password)))){
         QMessageBox::warning(this, "Login", "Incorrect data");
     }else{
+
+        auto id = database::getId(userName, password);
+        if(id == 0) {
+            QMessageBox::warning(this, "Login", "Incorrect data");
+            return;
+        }
+
+
         QMessageBox::information(this, "Login", "You are now logged in");
         hide();
-        menu = new Menu(this);
+        menu = new Menu(this, id);
         menu->show();
     }
     delete user;
+
 }
 
 void MainWindow::on_actionAbout_triggered()

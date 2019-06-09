@@ -4,6 +4,7 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QSqlError>
+#include "database.h"
 
 Forgotten_password::Forgotten_password(QWidget *parent) :
     QDialog(parent),
@@ -24,19 +25,7 @@ void Forgotten_password::on_pushButton_clicked()
     auto login = ui->login->text();
     auto email = ui->email->text();
 
-    auto dataBase = QSqlDatabase::addDatabase("QPSQL");
-
-   // dataBase.setDatabaseName("/Users/rafalgebica/Desktop/asdf/jeden.sqlite");
-    dataBase.setDatabaseName("2019_gebica_rafal");
-    dataBase.setHostName("195.150.230.210");
-    dataBase.setConnectOptions("sslmode=prefer");
-    dataBase.setPort(5434);
-    dataBase.setUserName("2019_gebica_rafal");
-    dataBase.setPassword("30752");
-    bool ok = dataBase.open();
-
-    if(!ok)
-        qDebug() << dataBase.lastError().text();
+    auto dataBase = database::connect();
 
     QSqlQuery query {dataBase};
     query.prepare("select id from communicator.users where name = '"+name+"' and surname = '"+surname+"' and login = '"+login+"');");

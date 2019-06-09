@@ -25,7 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-    database.cpp \
+    database.cc \
     forgotten_password.cpp \
     help.cpp \
         main.cpp \

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>PWSZ IRC</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/images/sublime.bmp);</string>
@@ -34,24 +34,6 @@
     <string>User name:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="userName">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>10</y>
-     <width>171</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QTextEdit" name="msg">
    <property name="geometry">
     <rect>
@@ -72,7 +54,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>SEND</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="msg_send">
@@ -83,6 +65,29 @@
      <width>581</width>
      <height>25</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="userName">
+   <property name="geometry">
+    <rect>
+     <x>102</x>
+     <y>10</y>
+     <width>191</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="getMsg">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>GET</string>
    </property>
   </widget>
  </widget>
