@@ -24,6 +24,7 @@ Menu::~Menu()
 
 void Menu::on_sendButton_clicked()
 {
+    ui->msg->clear();
     auto msg = ui->msg_send->text();
     if(msg.isEmpty() || msg.isNull()) {
         QMessageBox::warning(this, "Error", "Empty message");
@@ -57,6 +58,7 @@ void Menu::on_sendButton_clicked()
 
 void Menu::on_getMsg_clicked()
 {
+    ui->msg->clear();
     auto recvLogin = ui->userName->text();
     auto recv = database::getId(recvLogin);
 
@@ -67,6 +69,7 @@ void Menu::on_getMsg_clicked()
     auto sender = id;
     auto query = database::getMessages(sender, recv);
 
+    ui->msg->clear();
     allignMessages(query);
   //  std::thread t{&Menu::refreshMessages, sender, recv};
   //  t.join();
@@ -82,7 +85,6 @@ void Menu::allignMessages(QSqlQuery &query) {
 
         ui->msg->append(query.value(0).toString().append('\n'));
         ui->msg_send->clear();
-
     }
 }
 

@@ -26,22 +26,20 @@ void MainWindow::on_loginBtn_clicked()
     QSqlQuery query{dataBase};
 
     user = new User(userName, password);
-    if((!user->isDataCorrect(userName)) || (!(user->isDataCorrect(password)))){
+
+
+    auto id = database::getId(userName, password);
+    if(id == 0) {
         QMessageBox::warning(this, "Login", "Incorrect data");
-    }else{
-
-        auto id = database::getId(userName, password);
-        if(id == 0) {
-            QMessageBox::warning(this, "Login", "Incorrect data");
-            return;
-        }
-
-
-        QMessageBox::information(this, "Login", "You are now logged in");
-        hide();
-        menu = new Menu(this, id);
-        menu->show();
+        return;
     }
+
+
+    QMessageBox::information(this, "Login", "You are now logged in");
+    hide();
+    menu = new Menu(this, id);
+    menu->show();
+
     delete user;
 
 }
