@@ -12,7 +12,7 @@ bool User::isDataCorrect(QString data)
         return false;
 
     for(int i = 0; i < data.size(); i++){
-        if(!((data[i] <= 'z' && data[i] >= 'a') || (data[i] <= 'Z' && data[i] >= 'A')))
+        if(!((data[i] <= 'z' && data[i] >= 'a') || (data[i] <= 'Z' && data[i] >= 'A') || (data[i] <= '9' && data[i] >= '0')))
             return false;
     }
     return true;
