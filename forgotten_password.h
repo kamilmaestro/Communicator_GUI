@@ -15,7 +15,7 @@ public:
     explicit Forgotten_password(QWidget *parent = nullptr);
     ~Forgotten_password();
 
-private slots:
+private:
     void on_pushButton_clicked();
 
 private:

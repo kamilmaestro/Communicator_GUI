@@ -8,7 +8,7 @@
 namespace database {
 QSqlDatabase &connect();
 QSqlQuery &getMessages(int id1, int id2);
-int getId(QString login); //TODO: std::optional
+int getId(QString login);
 int getId(QString login, QString password);
 }
 

@@ -17,12 +17,12 @@ public:
     explicit Menu(QWidget *parent = nullptr, int id_ = 0);
     ~Menu();
 
-private slots:
+private:
     void on_sendButton_clicked();
 
     void on_getMsg_clicked();
 
-private:
+
     void allignMessages(QSqlQuery &query);
   [[ noreturn ]] void refreshMessages(int id1, int id2);
     Ui::Menu* ui;

@@ -57,6 +57,7 @@ QSqlQuery &database::getMessages(int id1, int id2) {
 
 int database::getId(QString login) {
     auto data = connect();
+    auto id{0};
 
     QSqlQuery query {data};
     try{
@@ -69,7 +70,6 @@ int database::getId(QString login) {
             throw new std::exception();
         }
 
-        auto id{0};
         if(query.first()) {
             id = query.value(0).toInt();
         }

@@ -16,7 +16,7 @@ public:
     explicit Registration(QWidget *parent = 0);
     ~Registration();
 
-private slots:
+private:
 
     void on_confirmBtn_accepted();
 

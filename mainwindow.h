@@ -19,7 +19,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void handleMsg(QString title, QString text);
-private slots:
+private:
     void on_loginBtn_clicked();
 
     void on_actionAbout_triggered();
